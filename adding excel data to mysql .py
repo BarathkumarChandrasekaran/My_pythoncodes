@@ -12,7 +12,7 @@ book = xlrd3.open_workbook("D:/pythonfiles/payscale.xlsx")
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="Barathbk29@123",
+  password="#your password",
   database="Employee_detailssample"
 )
 
