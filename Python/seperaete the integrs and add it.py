@@ -1,7 +1,3 @@
-# for k in range(0,50):
-#     if (k%3==0) and (k%6==0) and (k%7==0):
-#         print(k)
-#
 a=[]
 k=0
 while(k<=50):
