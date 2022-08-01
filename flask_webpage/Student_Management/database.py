@@ -1,5 +1,3 @@
-# FOREGIN KEY, triger , cascade
-
 import sqlite3
 
 def studentData():
@@ -16,9 +14,7 @@ studentData()
 def addstdrec(usn,name,mobileno,address,email):
     con=sqlite3.connect("student.db")
     cur=con.cursor()
-    # print("testtttt========",type(usn),type(name),type(mobileno),type(address),type(email))
     cur.execute("""INSERT INTO student VALUES (:usn,:name,:mobileno,:address,:email)""",{'usn':usn,'name':name,'mobileno':mobileno,'address':address,'email':email})
-    # print("000000000000000000000000000")
     con.commit()
     con.close()
 
@@ -29,8 +25,7 @@ def viewdatastud():
     rows=cur.fetchall()
     con.close()
     return rows
-# addstdrec("1CR18CS","harsh","875814979","india","a@b.com")
-# print(viewdatastud(),"------------------")
+
 
 def deletestdrec(usn):
     con=sqlite3.connect("student.db")
@@ -50,7 +45,7 @@ def updatestddata(usn,name,mobileno,address,email):
     con.close()
 
 
-# print(viewdatastud())
+
 def moderatordata():
     con=sqlite3.connect("student.db")
     cur=con.cursor()
@@ -71,8 +66,6 @@ def addmoderator(idm,namem,password,emailm,contactno):
     con.commit()
     con.close()
 
-# addmoderator(69,"harsh","hd","fk@gmail.com",111)
-# addmoderator(2,"gsgg","kl","fs@gmail.com",21)
 
 def viewmoderator():
     con=sqlite3.connect("student.db")
@@ -82,7 +75,6 @@ def viewmoderator():
     con.close()
     return rows
 
-# print(viewmoderator())
 def deleterecmoderator(idm):
      con=sqlite3.connect("student.db")
      cur=con.cursor()
@@ -99,7 +91,7 @@ def updaterecmoderator(idm,namem,password,emailm,contactno):
      con.commit()
      con.close()
 
-# print(viewmoderator())
+
 
 
 
@@ -123,7 +115,7 @@ def addfeedetails(usn,amount,status,payment_date,penalty):
      cur.execute(""" INSERT INTO fee VALUES(:usn,:amount,:status,:payment_date,:penalty) """, {'usn':usn,'amount':amount,'status':status,'payment_date':payment_date,'penalty':penalty} )
      con.commit()
      con.close()
-# addfeedetails("1CR18CS","50000","PAID","25-JULY","NHI LAGI")
+
 def viewfeedetails():
      con=sqlite3.connect("student.db")
      cur=con.cursor()
@@ -131,7 +123,7 @@ def viewfeedetails():
      rows=cur.fetchall()
      con.close()
      return rows
-# print(viewfeedetails())
+
 
 
 def deletefeerec(usn):
