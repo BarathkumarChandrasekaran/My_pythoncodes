@@ -258,13 +258,4 @@ def view_fees():
 	return render_template('view_fees.html',data=lst,lenght=len(lst))
 
 
-# @app.route('/viewdata',methods=["POST","GET"])
-# def view():
-# 	return f"<h1>{viewmoderator()}</h1>"
-# @app.route("/<usr>",methods=["POST","GET"])
-# def user(usr):
-# 	print("ok",usr)
-# 	return  f"<h1>Welcome :{usr}</h1>"
-
-
 app.run(debug=True)
