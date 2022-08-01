@@ -1,2 +1,2 @@
 # My_pythoncodes
-I have added my python codes which i have learned of my own. 
+I have added my learnings and projects which i have done on my own. 
